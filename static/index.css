@@ -1,0 +1,111 @@
+.input-file-container {
+  position: relative;
+  width: 225px;
+}
+
+.input-file-trigger {
+  display: block;
+  padding: 14px 45px;
+  color: #000021;
+  background: #1de9b6;
+  font-size: 1em;
+  transition: all 0.4s;
+  cursor: pointer;
+  margin-bottom: 3em;
+  font-weight: 600;
+}
+
+.input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 225px;
+  opacity: 0;
+  padding: 14px 0;
+  cursor: pointer;
+}
+
+.input-file:hover + .input-file-trigger,
+.input-file:focus + .input-file-trigger,
+.input-file-trigger:hover,
+.input-file-trigger:focus {
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+
+body {
+  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+  color: #7f8c9a;
+  background: #fcfdfd;
+}
+h1,
+h2 {
+  margin-bottom: 5px;
+  font-weight: normal;
+  text-align: center;
+  color: #aaa;
+}
+h2 {
+  margin: 5px 0 2em;
+  color: #1abc9c;
+}
+form {
+  width: 225px;
+  margin: 0 auto;
+  text-align: center;
+}
+h2 + P {
+  text-align: center;
+}
+.txtcenter {
+  margin-top: 4em;
+  font-size: 0.9em;
+  text-align: center;
+  color: #aaa;
+}
+.copy {
+  margin-top: 2em;
+}
+.copy a {
+  text-decoration: none;
+  color: #1abc9c;
+}
+.submit-button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 12px 24px;
+  border: 0;
+  color: #000021;
+  background: #1de9b6;
+  line-height: 1.15;
+  font-size: 16px;
+  transition: all 0.5s ease;
+  margin-top: 2em;
+}
+
+.submit-button:hover {
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+
+select {
+  /* styling */
+  background-color: white;
+  border: thin solid #1de9b6;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+  /* reset */
+
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Scraping</title>
+    <link rel="stylesheet" href="../static/index.css" />
+    <script>
+      // JavaScript to update the selected file name when a file is chosen
+      document.addEventListener("DOMContentLoaded", function () {
+        const fileInput = document.getElementById("my-file");
+        const fileTrigger = document.querySelector(".input-file-trigger");
+        const fileNameSpan = document.querySelector(".file-name-span");
+
+        fileInput.addEventListener("change", function () {
+          if (fileInput.files.length > 0) {
+            fileNameSpan.textContent = fileInput.files[0].name;
+          } else {
+            fileNameSpan.textContent = "No file selected";
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Pinterest Scraper</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <div class="input-file-container">
+        <input
+          type="file"
+          name="urls_file"
+          id="my-file"
+          class="input-file"
+          accept=".txt"
+          required
+        />
+        <label tabindex="0" for="my-file" class="input-file-trigger"
+          >Select a file...</label
+        >
+        <span class="file-name-span">No file selected</span>
+        <!-- This span will display the selected file name -->
+        <select name="output_format">
+          <option value="json">JSON</option>
+          <option value="csv" selected>CSV</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-button">Scrape</button>
+    </form>
+  </body>
+</html>
